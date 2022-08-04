@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>franka_robotiq_description</name>
+  <version>0.1.0</version>
+  <description>franka_robotiq_description contains URDF files and meshes of
+  Franka Emika, with the robotiq arm</description>
+  <maintainer email="jethrokuan95@gmail.com">Jethro Kuan</maintainer>
+  <license>Apache 2.0</license>
+
+  <author>Jethro Kuan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>actionlib_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>controller_manager_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rospy</depend>
+  <depend>franka_control</depend>
+  <depend>franka_description</depend>
+  <depend>panda_moveit_config</depend>
+  <depend>robotiq_2f_gripper_control</depend>
+  <depend>rosparam</depend>
+
+  <exec_depend>xacro</exec_depend>
+</package>

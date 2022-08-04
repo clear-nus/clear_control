@@ -1,0 +1,8 @@
+prefix=/home/crslab/clear_control/devel
+
+Name: franka_control_wrappers
+Description: Description of franka_control_wrappers
+Version: 0.0.0
+Cflags: -I/home/crslab/clear_control/src/robots/libfranka/include
+Libs: -L${prefix}/lib -lfranka_control_wrappers /home/crslab/clear_control/src/robots/libfranka/build/libfranka.so.0.7.1
+Requires: controller_interface franka_hw geometry_msgs hardware_interface pluginlib realtime_tools roscpp

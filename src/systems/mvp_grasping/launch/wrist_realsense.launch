@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE launch>
+<launch>
+  <arg name="namespace"           default="camera"/>
+  <arg name="filters"             default="disparity,spatial"/>
+  
+  <include file="$(find realsense2_camera)/launch/rs_rgbd.launch">
+    <arg name="filters" value="$(arg filters)"/>
+  </include>
+  
+  <node pkg="nodelet" type="nodelet" name="standalone_nodelet"  args="manager"/>
+
+  <node pkg="nodelet" type="nodelet" name="convert_depth_to_m"
+        args="load depth_image_proc/convert_metric standalone_nodelet">
+        <remap from="image_raw" to="$(arg namespace)/depth/image_rect_raw"/>
+        <remap from="image" to="$(arg namespace)/depth/image_meters"/>
+  </node>
+</launch>

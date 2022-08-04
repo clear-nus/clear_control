@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /home/crslab/clear_control/src
+# Build directory: /home/crslab/clear_control/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("robots/franka_ros/franka_description")
+subdirs("robots/franka_ros/franka_ros")
+subdirs("robots/robotiq/robotiq")
+subdirs("robots/robotiq/robotiq_2f_140_gripper_visualization")
+subdirs("robots/robotiq/robotiq_2f_85_gripper_visualization")
+subdirs("robots/robotiq/robotiq_2f_c2_gripper_visualization")
+subdirs("robots/robotiq/robotiq_3f_gripper_articulated_gazebo")
+subdirs("robots/franka_ros/franka_msgs")
+subdirs("robots/robotiq/robotiq_3f_gripper_articulated_msgs")
+subdirs("systems/mvp_grasping")
+subdirs("robots/robotiq/robotiq_ethercat")
+subdirs("robots/robotiq/robotiq_2f_gripper_control")
+subdirs("robots/robotiq/robotiq_ft_sensor")
+subdirs("robots/robotiq/robotiq_modbus_rtu")
+subdirs("robots/robotiq/robotiq_modbus_tcp")
+subdirs("robots/robotiq/robotiq_2f_gripper_action_server")
+subdirs("robots/robotiq/robotiq_3f_gripper_control")
+subdirs("robots/franka_ros/franka_gripper")
+subdirs("robots/franka_ros/franka_visualization")
+subdirs("robots/robotiq/robotiq_3f_gripper_joint_state_publisher")
+subdirs("robots/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins")
+subdirs("robots/robotiq/robotiq_3f_gripper_visualization")
+subdirs("robots/robotiq/robotiq_3f_rviz")
+subdirs("robots/franka_ros/franka_hw")
+subdirs("robots/franka_ros/franka_control")
+subdirs("robots/franka_ros/franka_example_controllers")
+subdirs("robots/panda_moveit_config")
+subdirs("robots/franka_control_wrappers")
+subdirs("robots/franka_robotiq_description")
