@@ -5,7 +5,6 @@ The controller can be used to conduct force-relevant physcial experiments such a
 
 In addition to the hybrid force position controller that was designed, there are also additional controllers provided by franka_ros under the franka_example_controllers package in this repository that can be used.
 
-![](rviz.gif)
 
 ## Controller Design
 
@@ -39,6 +38,7 @@ roslaunch franka_example_controller hybrid_force_position_controller.launch
 ```
 
 This will launch an Rviz window visually depicting the configuration of the Franka robot as follows:
+![](rviz.gif)
 
 The pose of the end-effector can then be manipulated using the mouse cursor on the Rviz screen, which will correspondingly send the commands to the real robot to perform the exact same change in position/orientation.
 
