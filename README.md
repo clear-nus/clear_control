@@ -30,4 +30,6 @@ source devel/setup.bash
 roslaunch franka_example_controller hybrid_force_position_controller.launch
 ```
 
+This will launch an Rviz window visually depicting the configuration of the Franka robot as follows:
+
 
