@@ -5,6 +5,8 @@ The controller can be used to conduct force-relevant physcial experiments such a
 
 In addition to the hybrid force position controller that was designed, there are also additional controllers provided by franka_ros under the franka_example_controllers package in this repository that can be used.
 
+![](rviz.gif)
+
 ## Controller Design
 
 The controller was designed using a Proportional-Integral-Derivative (PID) control system for both its pose (position and orientation) and force domains. To couple the pose control with the force control, inverse kinematics was performed by accounting for the body Jacobian matrix of the robot at the end-effector frame (provided by Franka), the difference between the wrenches required for force and pose manipulations, and the gravitational forces.
