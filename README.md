@@ -5,6 +5,8 @@ The controller can be used to conduct force-relevant physcial experiments such a
 
 In addition to the hybrid force position controller that was designed, there are also additional controllers provided by franka_ros under the franka_example_controllers package in this repository that can be used.
 
+## Controller Design
+
 ## Setup
 
 This repository is packaged as a catkin workspace, and the following steps are to be performed sequentially to set it up properly.
@@ -22,6 +24,8 @@ catkin_make -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/clear_control/src/rob
 ```
 ## Usage
 
+### Launching the controller
+
 Once the ```catkin_make``` command has completed successfully, the following commands can be launched from the terminal window to run the controller.
 
 ```
@@ -32,4 +36,25 @@ roslaunch franka_example_controller hybrid_force_position_controller.launch
 
 This will launch an Rviz window visually depicting the configuration of the Franka robot as follows:
 
+The pose (position and orientation) of the end-effector can then be manipulated using the mouse cursor on the Rviz screen, which will correspondingly send the commands to the real robot to perform the exact same change in position/orientation.
 
+**NOTE**: Do not drag the cursor too much in any direction as this may result in dangerous reactions from the real robot. Operate the controller smoothly to conduct experiments safely. 
+
+### Changing the normal force
+
+```
+cd ~/clear_control
+cd src/robots/franka_ros/franka_example_controllers/config
+nano franka_example_controllers.yaml
+```
+Change the ```desired_normal_force``` value to desired controller force value. Setting too high of a force is expected to cause controller limits to be exceeded.
+
+### Tuning the controller parameters
+
+To tune the force control parameters of the controller, perform the following steps sequentially.
+```
+cd ~/clear_control
+cd src/robots/franka_ros/franka_example_controllers/config
+nano franka_example_controllers.yaml
+```
+Change the ```k_p_gain_force``` value to desired proportional force gain and ```k_i_gain_force``` to desired integral force gain. 
