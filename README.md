@@ -5,6 +5,7 @@ The controller can be used to conduct force-relevant physcial experiments such a
 
 In addition to the hybrid force position controller that was designed, there are also additional controllers provided by franka_ros under the franka_example_controllers package in this repository that can be used.
 
+![](robot_clean.gif)
 
 ## Controller Design
 
@@ -34,7 +35,7 @@ Once the ```catkin_make``` command has completed successfully, the following com
 ```
 cd ~/clear_control
 source devel/setup.bash
-roslaunch franka_example_controller hybrid_force_position_controller.launch
+roslaunch franka_example_controllers hybrid_force_position_controller.launch
 ```
 
 This will launch an Rviz window visually depicting the configuration of the Franka robot as follows:
